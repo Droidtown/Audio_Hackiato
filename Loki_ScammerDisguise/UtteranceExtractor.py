@@ -4,6 +4,7 @@
 
 from ArticutAPI import Articut
 import json
+import time
 import os
 import re
 import unicodedata
@@ -26,30 +27,33 @@ if __name__ == "__main__":
             jdict = json.loads(j.read())
 
         text = jdict["judgement"].replace("\r\n", "").replace(" ", "")
-        for k in key_tokenLIST:
-            if k in text:
-                if len(text) >= 20000:
-                    for i in range(len(text)): #倒著推算第一個不是中文字符的東西 (通常就是標點符號了啦)
-                        if unicodedata.name(text[-1*i]).startswith("CJK"):
-                            pass
-                        else: #很隨便地只取了 2 萬字以內的完整句子。2 萬字以上就…算了。這一段只是草草洗個資料而已，重點是下一步的 Loki
-                            text = text[:-1*i]
-                else:
-                    pass
-
-                resultDICT = articut.parse(text)
-                for r in resultDICT["result_pos"]:
-                    if len(r) == 1:  #標點符號
+        if any(k in text for k in key_tokenLIST):
+            if len(text) >= 20000:
+                for i in range(len(text)-1, 0, -1): #倒著推算第一個不是中文字符的東西 (通常就是標點符號了啦)
+                    if not unicodedata.name(text[i]).startswith("CJK") and i < 20000:
+                        text = text[:i] #很隨便地只取了 2 萬字以內的完整句子。2 萬字以上就…算了。這一段只是草草洗個資料而已，重點是下一步的 Loki
+                        break 
+                    else: 
                         pass
-                    else:
-                        sentence = re.sub(purgedPat, "", r)
-                        for k in key_tokenLIST:
-                            if k in sentence:
-                                utteranceLIST.append(sentence)
             else:
                 pass
 
-    with open("CollectedUtterance.json", "w", "utf-8") as j:
+            resultDICT = articut.parse(text)
+            while not isinstance(resultDICT, dict) or 'result_pos' not in resultDICT.keys():  
+                print(f'Unable to get results for {f}, wait 30 seconds.')
+                time.sleep(30)
+                resultDICT = articut.parse(text)
+
+            for r in resultDICT["result_pos"]:
+                if len(r) == 1:  #標點符號
+                    pass
+                else:
+                    sentence = re.sub(purgedPat, "", r)
+                    if any(k in sentence for k in key_tokenLIST):
+                        utteranceLIST.append(sentence)
+
+
+    with open("CollectedUtterance.json", "w", encoding='utf8') as j:
         json.dump(utteranceLIST, j, ensure_ascii=False)
 
 
