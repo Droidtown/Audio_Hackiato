@@ -411,19 +411,19 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["fakeid"] = args[1] + "人員"
 
     if utterance == "假冒[大陸][公安]名義詐騙":
-        resultDICT["fakeid"] = args[1] + args[2]
+        resultDICT["fakeid"] = args[1]
 
     if utterance == "假冒[大陸][公安]單位":
-        resultDICT["fakeid"] = args[1] + args[2]
+        resultDICT["fakeid"] = args[1]
 
     if utterance == "假冒[大陸][公安]接完電話":
-        resultDICT["fakeid"] = args[1] + args[2]
+        resultDICT["fakeid"] = args[1]
 
     if utterance == "假冒[大陸][公安]接聽":
-        resultDICT["fakeid"] = args[1] + args[2]
+        resultDICT["fakeid"] = args[1]
 
     if utterance == "假冒[大陸][公安]行騙":
-        resultDICT["fakeid"] = args[1] + args[2]
+        resultDICT["fakeid"] = args[1]
 
     if utterance == "假冒[大陸][地區社][服局]客服人員":
         resultDICT["fakeid"] = inputSTR[2:]
