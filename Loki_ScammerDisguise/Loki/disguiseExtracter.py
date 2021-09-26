@@ -12,8 +12,8 @@ def judgeReader(judgeFILE):
     讀入判決書檔案
     回傳判決書內容主文
     '''
-    judgeDICT = json.load(open(judgeFILE, encoding="utf-8"))
-    return judgeDICT["judgement"].replace("\r\n", "").replace(" ", "")
+    judgeDICT = json.load(open(judgeFILE, encoding="utf-8").read())
+    return judgeDICT["judgement"].replace("\r\n", "").replace("　", "").replace(" ", "")
 
 def getLokiResult(inputSTR):
     punctuationPat = re.compile("[,\.\?:;，。？、：；\n]+")
@@ -25,11 +25,14 @@ def getLokiResult(inputSTR):
         if tmpDICT == {}:
             pass
         else:
-            for f in tmpDICT["fakeid"]:
-                if f in resultDICT.keys():
-                    resultDICT[f] = resultDICT[f] + 1
-                else:
-                    resultDICT[f] = 1
+            if "fakeid" in tmpDICT.keys():
+                for f in tmpDICT["fakeid"]:
+                    if f == "":
+                        pass
+                    elif f in resultDICT.keys():
+                        resultDICT[f] = resultDICT[f] + 1
+                    else:
+                        resultDICT[f] = 1
     return resultDICT
 
 
@@ -54,7 +57,7 @@ if __name__ == "__main__":
     警佯裝客人，以電話撥打本案門號與應召集團成員議定性交
     易之時、地及代價後，於同日下午4時50分許，在新北市○
     ○區○○路000巷00弄0號2樓2號房欲從事性交易，經員警表
-    明身分後，因而查悉上情。""".replace("\r\n", "").replace(" ", "")
+    明身分後，因而查悉上情。""".replace("\r\n", "").replace("　", "").replace(" ", "")
     resultDICT = getLokiResult(testSTR)
 
 
