@@ -52,8 +52,8 @@ except:
 
 
 LOKI_URL = "https://api.droidtown.co/Loki/BulkAPI/"
-USERNAME = "peter.w@droidtown.co"
-LOKI_KEY = "uRV*jh%l3H*fQPU$px1WcNqXOUyN+@K"
+USERNAME = ""
+LOKI_KEY = ""
 # 意圖過濾器說明
 # INTENT_FILTER = []        => 比對全部的意圖 (預設)
 # INTENT_FILTER = [intentN] => 僅比對 INTENT_FILTER 內的意圖
