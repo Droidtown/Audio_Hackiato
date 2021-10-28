@@ -229,566 +229,751 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["fakeid"].append("電信局" + args[0])
 
     if utterance == "假冒[○○醫院]員工":
-        resultDICT["fakeid"].append(args[0] + "員工")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0] + "員工")
 
     if utterance == "假冒[○○醫院]員工之[成年女性]":
-        resultDICT["fakeid"].append(args[0] + "員工")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0] + "員工")
 
     if utterance == "假冒[丁○○]名義":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[上海市][楊浦]公安局[經濟]犯罪[調查科][張思偉][科長]":
-        resultDICT["fakeid"].append(args[4] + args[5])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[4] + args[5])
 
     if utterance == "假冒[丙○○]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[丙○○]向電信公司辦理停話":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[丙○○]申辦停話之[人]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[丙○○]等語":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[中國][電信]或[醫][保局人員]":
-        resultDICT["fakeid"].append("".join([args[0], args[1]]))
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("".join([args[0], args[1]]))
 
     if utterance == "假冒[中國大陸][公安]隊員":
-        resultDICT["fakeid"].append("".join(args))
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("".join(args))
 
     if utterance == "假冒[中國大陸]地區當地之[公安]人員":
-        resultDICT["fakeid"].append("".join([args[0], args[1]]))
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("".join([args[0], args[1]]))
 
     if utterance == "假冒[中國大陸]法院職員":
-        resultDICT["fakeid"].append("法院人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("法院人員")
 
     if utterance == "假冒[中華電信][股份][有限]公司[人員]":
-        resultDICT["fakeid"].append(args[3])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[3])
 
     if utterance == "假冒[中華電信]公司[服務人員]":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒[中華電信]股份[有限]公司":
-        resultDICT["fakeid"].append(inputSTR[2:])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(inputSTR[2:])
 
     if utterance == "假冒[乙○○]之女":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[他人][名義]製作文書為[要]件":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[他人][證件][前]去開戶所得":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[代理人][李國鼎]盜領90萬元":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[伊][球友][蔡平輝]名義之人":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒[公務]人員":
-        resultDICT["fakeid"].append(args[0] + "人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0] + "人員")
 
     if utterance == "假冒[公務員]之情形[可]指":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[公務員]之方式行騙":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[公務員]之方式進行詐騙":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[公務員]僭行職權":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[公務員]僭行職權之犯意聯絡":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[公務員]手段詐騙之損失":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[公務員]詐欺取財之犯意聯絡":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[公務員]詐欺部分":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[公務員]詐財":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[公務員]詐騙":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[公務員]詐騙告訴人":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[公務員]身分犯案":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[公務員]身分行使職權":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[公務員]部分":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[公安]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[公安][人員]雷鳴":
-        resultDICT["fakeid"].append("".join(args))
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("".join(args))
 
     if utterance == "假冒[公安]人員丁[超]":
-        resultDICT["fakeid"].append(args[0] + "人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0] + "人員")
 
     if utterance == "假冒[公安]人員受理報案":
-        resultDICT["fakeid"].append(args[0] + "人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0] + "人員")
 
     if utterance == "假冒[公安]等職員":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[其][同事]":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒[其]友人[劉鳳珠]":
-        resultDICT["fakeid"].append("友人")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("友人")
 
     if utterance == "假冒[其]友人[證凱][法師]":
-        resultDICT["fakeid"].append("友人")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("友人")
 
     if utterance == "假冒[劉玉珍][友人]向其借款":
-        resultDICT["fakeid"].append("友人")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("友人")
 
     if utterance == "假冒[友人]借款":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[友人]或[親人]之名義":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[司法][事務官]之[甲○○]":
-        resultDICT["fakeid"].append("".join([args[0], args[1]]))
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("".join([args[0], args[1]]))
 
     if utterance == "假冒[司法][人員]詐欺":
-        resultDICT["fakeid"].append("".join([args[0], args[1]]))
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("".join([args[0], args[1]]))
 
     if utterance == "假冒[司法]人員的部分":
-        resultDICT["fakeid"].append(args[0] + "人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0] + "人員")
 
     if utterance == "假冒[司法]人員詐欺之集團":
-        resultDICT["fakeid"].append(args[0] + "人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0] + "人員")
 
     if utterance == "假冒[司法]人員詐欺集團":
-        resultDICT["fakeid"].append(args[0] + "人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0] + "人員")
 
     if utterance == "假冒[司法]人員詐財案例":
-        resultDICT["fakeid"].append(args[0] + "人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0] + "人員")
 
     if utterance == "假冒[名義]之[人]之[帳戶]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[吳金泉]車行老闆":
-        resultDICT["fakeid"].append("老闆")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("老闆")
 
     if utterance == "假冒[國泰世華]銀行[人員]":
-        resultDICT["fakeid"].append("銀行" + args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("銀行" + args[-1])
 
     if utterance == "假冒[基隆]署立醫院[人員]":
-        resultDICT["fakeid"].append("醫院" + args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("醫院" + args[-1])
 
     if utterance == "假冒[基隆]長庚醫院[人員]":
-        resultDICT["fakeid"].append("醫院" + args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("醫院" + args[-1])
 
     if utterance == "假冒[報案中心]的公安":
-        resultDICT["fakeid"].append("公安")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("公安")
 
     if utterance == "假冒[大眾玫瑰][唱片]服務人員":
-        resultDICT["fakeid"].append("服務人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("服務人員")
 
     if utterance == "假冒[大陸][公安][人員][雷鳴]的就是[我]":
-        resultDICT["fakeid"].append(args[1] + args[2])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1] + args[2])
 
     if utterance == "假冒[大陸][公安]人員":
-        resultDICT["fakeid"].append(args[1] + "人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1] + "人員")
 
     if utterance == "假冒[大陸][公安]名義詐騙":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒[大陸][公安]單位":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒[大陸][公安]接完電話":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒[大陸][公安]接聽":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒[大陸][公安]行騙":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒[大陸][地區社][服局]客服人員":
-        resultDICT["fakeid"].append(inputSTR[2:])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(inputSTR[2:])
 
     if utterance == "假冒[大陸]公安":
-        resultDICT["fakeid"].append("公安")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("公安")
 
     if utterance == "假冒[大陸]公安局公安[人員]":
-        resultDICT["fakeid"].append("公安")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("公安")
 
     if utterance == "假冒[大陸]地區[一一０][指揮中心]值班[員警]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[大陸]地區[中]級[人民]法院客服人員":
-        resultDICT["fakeid"].append("法院人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("法院人員")
 
     if utterance == "假冒[大陸]地區[公安]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[大陸]地區[公安][人員]之[第二線]":
-        resultDICT["fakeid"].append(args[1] + args[2])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1] + args[2])
 
     if utterance == "假冒[大陸]地區[公安]之工作":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[大陸]地區[公安]人員":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[大陸]地區[公安]隊員":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[大陸]地區[郵政]或[中國][工商][銀行]之[行員]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[大陸]地區[郵政局]客服人員":
-        resultDICT["fakeid"].append(args[1] + "客服")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1] + "客服")
 
     if utterance == "假冒[大陸]地區[電信]或[醫][保局人員]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[大陸]地區公安局之[公安]人員":
-        resultDICT["fakeid"].append(args[-1] + "人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1] + "人員")
 
     if utterance == "假冒[大陸]法院[公證處][主任]":
-        resultDICT["fakeid"].append("".join(args[-2:]))
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("".join(args[-2:]))
 
     if utterance == "假冒[大陸]醫療[保險局]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[天津]公安局的[詐騙集團]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[字跡]而躲避鑑定為由":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[宋毓俊]朋友":
-        resultDICT["fakeid"].append("朋友")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("朋友")
 
     if utterance == "假冒[張小明]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[政府][機關]或[公務員]名義為之":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[政府]機關或[公務員]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[新北]市政府[某]分局[員警]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[新北]市政府[警察局][金融]犯罪[調查科][科長]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[新竹市][員警]去電[賴秋雄]":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒[新竹縣]警局":
-        resultDICT["fakeid"].append("警局")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("警局")
 
     if utterance == "假冒[曾明章][表哥][林天旺]":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒[朋友身分]之方法":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[東森]購物人員":
-        resultDICT["fakeid"].append("服務人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("服務人員")
 
     if utterance == "假冒[東森]購物廠家":
-        resultDICT["fakeid"].append("廠家")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("廠家")
 
     if utterance == "假冒[東森]購物服務人員":
-        resultDICT["fakeid"].append("服務人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("服務人員")
 
     if utterance == "假冒[林素春][女兒]":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒[業務員]及郵局客服人員":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢察官]之[吳承恩]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢察官]之三線機手":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢察官]之名義詐騙":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢察官]之方式為之":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢察官]助理":
-        resultDICT["fakeid"].append("助理")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("助理")
 
     if utterance == "假冒[檢察官]助理之[陳○穎]":
-        resultDICT["fakeid"].append("助理")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("助理")
 
     if utterance == "假冒[檢察官]及[護士]行騙之方式":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢察官]向[乙○○]取款":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢察官]執行職權並傳真":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢察官]或其他[公務員]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢察官]或其他[公務員]之名義":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢察官]施行詐騙":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢察官]的[男生]打電話過來":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢察官]等司法[人員]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢警]或[親友]或[網購人員]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢警]等[公務員]身分":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢警]誆以涉案":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[檢警人員]謊稱":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[法官]或[檢察官]身份":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[渠胞][弟]佯稱":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[特定][機構]之[人頭][電話]":
-        resultDICT["fakeid"].append("".join(args[-2:]))
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("".join(args[-2:]))
 
     if utterance == "假冒[真實]之[持卡人]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[管區]警員":
-        resultDICT["fakeid"].append("警員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("警員")
 
     if utterance == "假冒[網路][賣家]及[銀行][行員]":
-        resultDICT["fakeid"].append("".join(args[0:2]))
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("".join(args[0:2]))
 
     if utterance == "假冒[網路][賣家]客服[人員]":
-        resultDICT["fakeid"].append("客服" + args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("客服" + args[-1])
 
     if utterance == "假冒[網路]客服[人員]":
-        resultDICT["fakeid"].append("客服" + args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("客服" + args[-1])
 
     if utterance == "假冒[臺北][地方][法院][檢察署][檢察官]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[臺北][地方][法院]之[歹徒]來電":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[臺北][慈濟]醫院[新店]分院[護士]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[臺北]○○[醫院○○]分院[護士]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[臺北]地方[法院]人員":
-        resultDICT["fakeid"].append(args[-1] + "人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1] + "人員")
 
     if utterance == "假冒[臺北]地檢署[高小明]檢察官":
-        resultDICT["fakeid"].append("檢察官")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("檢察官")
 
     if utterance == "假冒[臺北]市政府[警察局][人員]及[檢察官]":
-        resultDICT["fakeid"].append(args[1] + args[2])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1] + args[2])
 
     if utterance == "假冒[董月滿]之[人]詐欺[之前]":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒[蔡政宜]的[名義]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[蕭小明][朋友][鍾明達]":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒[被害人]名義打電話報案":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[親友]借款之手法":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[許][中][順友人]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒[調查局][人員]或[律師]等身分":
-        resultDICT["fakeid"].append(args[0] + args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0] + args[1])
 
     if utterance == "假冒[證件][前]去開立之人頭帳戶":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[警員]及[檢察官]辦案":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[警員]名義":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[警員]身分[四處]向人行騙":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[警員]身分向人行騙":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[警官]向[熊寄辰]偽稱":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[警察][身分]撥打電話予[江佳勳]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[護士]之女生":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[護士]打電話給[妳]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[護士]打電話過來":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[護士]的女生打電話過來":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[護士]與假冒[檢察官]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[身分]之電話詐騙犯罪型態":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[身分]取信於被害人":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[身分者]施詐要求面交及匯款":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒[速][易購]拍賣網客服人員":
-        resultDICT["fakeid"].append("客服")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("客服")
 
     if utterance == "假冒[郵政局]客服人員接聽":
-        resultDICT["fakeid"].append("客服")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("客服")
 
     if utterance == "假冒[醫院]護理師":
-        resultDICT["fakeid"].append("護理師")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("護理師")
 
     if utterance == "假冒[金融][監管局]之主任":
-        resultDICT["fakeid"].append("主任")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("主任")
 
     if utterance == "假冒[金融][監管局]人員之[第三線]":
-        resultDICT["fakeid"].append("線人")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("線人")
 
     if utterance == "假冒[銀行][人員]之[機房]成員":
-        resultDICT["fakeid"].append(args[-1] + "人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1] + "人員")
 
     if utterance == "假冒[銀行][專員]之[陳○穎]":
-        resultDICT["fakeid"].append(args[0] + args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0] + args[1])
 
     if utterance == "假冒[銀行]專員":
-        resultDICT["fakeid"].append(args[0] + "專員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0] + "專員")
 
     if utterance == "假冒[鍾鎔聲]之[專科][同學][李坤晉]":
-        resultDICT["fakeid"].append(args[-2])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-2])
 
     if utterance == "假冒[長輩]之[孫女]或[好友]":
-        resultDICT["fakeid"].append(args[-2])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-2])
 
     if utterance == "假冒[電信][警察]以電話聯絡[葉一郎]":
-        resultDICT["fakeid"].append(args[0] + args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0] + args[1])
 
     if utterance == "假冒[電信公司]客服人員或[醫][保局人員]":
-        resultDICT["fakeid"].append(args[0] + "客服人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0] + "客服人員")
 
     if utterance == "假冒[電話][費]催繳人員":
-        resultDICT["fakeid"].append("催繳人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("催繳人員")
 
     if utterance == "假冒[電話]行銷人員":
-        resultDICT["fakeid"].append("行銷人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("行銷人員")
 
     if utterance == "假冒[高小明][檢察官]致電[賴秋雄]":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒[高雄][長庚醫院]掛號人員":
-        resultDICT["fakeid"].append("掛號人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("掛號人員")
 
     if utterance == "假冒[龍立銘]公司[臺南][營業處]之員工[劉景松]":
-        resultDICT["fakeid"].append("員工")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("員工")
 
     if utterance == "假冒[龍立銘]公司[臺南][營業處]之經理[劉景松]":
-        resultDICT["fakeid"].append("經理")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("經理")
 
     if utterance == "假冒不知情之[陳聖文]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒中信銀行[服務人員]":
-        resultDICT["fakeid"].append("銀行" + args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("銀行" + args[0])
 
     if utterance == "假冒中國大陸公安":
-        resultDICT["fakeid"].append("公安")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("公安")
 
     if utterance == "假冒之公安局[地址]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒之專員等頭銜":
-        resultDICT["fakeid"].append("專員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("專員")
 
     if utterance == "假冒代理人[李國鼎]":
-        resultDICT["fakeid"].append("代理人")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("代理人")
 
     if utterance == "假冒代辦貸款[業者]之要求":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒係[中國大陸]地區[上海市][楊浦]公安局[公安][顧國慶]":
         resultDICT["fakeid"].append(args[-2])
 
     if utterance == "假冒係[親友]需借款":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒係[調查局]之[政風]專員":
-        resultDICT["fakeid"].append("專員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("專員")
 
     if utterance == "假冒係[電信公司]客服人員誆稱":
-        resultDICT["fakeid"].append("客服")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("客服")
 
     if utterance == "假冒偵辦[刑案]之[公務員]或[金融][機構][人員]":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒公務員名義":
-        resultDICT["fakeid"].append("公務員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("公務員")
 
     if utterance == "假冒具備施工[設備]及[能力]而締約之[情形]":
         # write your code here
         pass
 
     if utterance == "假冒友人[希奎]之名義":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒司法[機關]的[你們]就[會]做":
         resultDICT["fakeid"].append("司法" + args[0])
@@ -797,127 +982,164 @@ def getResult(inputSTR, utterance, args, resultDICT):
         resultDICT["fakeid"].append("司法" + args[0])
 
     if utterance == "假冒司法[警察]":
-        resultDICT["fakeid"].append("司法" + args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("司法" + args[0])
 
     if utterance == "假冒司法機關名義":
-        resultDICT["fakeid"].append("司法機關")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("司法機關")
 
     if utterance == "假冒各種[身分]以話術詐欺":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒同事[黃秀雯]":
-        resultDICT["fakeid"].append("同事")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("同事")
 
     if utterance == "假冒名義之本人":
-        # write your code here
-        pass
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("本人")
 
     if utterance == "假冒告訴人[甲○○]":
-        # write your code here
-        pass
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒告訴人[蔣琨峰]之[妻][舅][吳志銘]":
-        resultDICT["fakeid"].append(args[1] + args[2])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1] + args[2])
 
     if utterance == "假冒大陸[秘書]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒失智之[女子]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒張小明[弟弟]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒拍賣網站[服務人員]及[銀行][人員]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒松[富]隆公司之員工":
-        resultDICT["fakeid"].append("公司員工")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("公司員工")
 
     if utterance == "假冒檢察官或警察":
-        resultDICT["fakeid"].append("檢察官")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("檢察官")
 
     if utterance == "假冒為[中華電信][股份][有限]公司":
-        resultDICT["fakeid"].append("".join(args) + "公司")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("".join(args) + "公司")
 
     if utterance == "假冒為[健保局]客服[人員]":
-        resultDICT["fakeid"].append("客服" + args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("客服" + args[-1])
 
     if utterance == "假冒為[嘉義市][警察局]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒為[地主][張秀芬]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒為[大陸]地區[杭州][男子]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒為[大陸]地區公安局[公安]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒為[林佑翰]去臨櫃取款等語":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒為[檢察官]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒為購物[網站]客服[人員]":
-        resultDICT["fakeid"].append("客服" + args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("客服" + args[-1])
 
     if utterance == "假冒玉山銀行[人員]":
-        resultDICT["fakeid"].append("銀行" + args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("銀行" + args[0])
 
     if utterance == "假冒王國憲代理人之名":
-        resultDICT["fakeid"].append("代理人")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("代理人")
 
     if utterance == "假冒義大醫院[人員]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒被害人[謝清河]之[球友][蔡平輝]":
-        resultDICT["fakeid"].append(args[1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[1])
 
     if utterance == "假冒警員之名義":
-        resultDICT["fakeid"].append("警員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("警員")
 
     if utterance == "假冒警察或檢察官":
-        resultDICT["fakeid"].append("警員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("警員")
 
     if utterance == "假冒貸款[代辦公司]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假冒身分去電向[黃桂花]訛稱[友人]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假冒醫保局人員":
-        resultDICT["fakeid"].append("醫保局人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("醫保局人員")
 
     if utterance == "假冒里民[王能貴]":
-        resultDICT["fakeid"].append("里民")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("里民")
 
     if utterance == "假裝[其]為[系爭][建物][所有][人]之過程":
         # write your code here
         pass
 
     if utterance == "假裝[網路]銷售人員":
-        resultDICT["fakeid"].append("銷售人員")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("銷售人員")
 
     if utterance == "假裝一線的110報案系統[總機]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假裝係[甲○○]之[友人]":
-        resultDICT["fakeid"].append(args[-1])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[-1])
 
     if utterance == "假裝大陸[公安]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假裝成[公安]":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假裝是[家屬]去談":
-        resultDICT["fakeid"].append(args[0])
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append(args[0])
 
     if utterance == "假裝白牌計程車":
-        resultDICT["fakeid"].append("白牌計程車")
+        if "假" in inputSTR[0]:
+            resultDICT["fakeid"].append("白牌計程車")
 
     if utterance == "偽裝[大陸]地區公安局[人員]":
         resultDICT["fakeid"].append(args[-1])
