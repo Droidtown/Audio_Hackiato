@@ -62,15 +62,18 @@ if __name__ == "__main__":
 
 
     targetDIR = "臺灣苗栗地方法院"
-    #resultDICT = {}
-    #judgeFileLIST = os.listdir(targetDIR)[:3]
-    #for j in judgeFileLIST:
-        #judgmentSTR = judgeReader("{}/{}".format(targetDIR, j))
-        #tmpDICT = getLokiResult(judgmentSTR)
-        #for fk in tmpDICT.keys():
-            #if fk in resultDICT.keys():
-                #resultDICT[fk] = resultDICT[fk] + tmpDICT[fk]
-            #else:
-                #resultDICT[fk] = 1
+    resultDICT = {}
+    judgeFileLIST = [f for f in os.listdir(targetDIR) if not f.startswith(".")]
+    for j in judgeFileLIST:
+        print("Processing:{}".format(j))
+        judgmentSTR = judgeReader("{}/{}".format(targetDIR, j))
+        tmpDICT = getLokiResult(judgmentSTR)
+        for fk in tmpDICT.keys():
+            if fk in resultDICT.keys():
+                resultDICT[fk] = resultDICT[fk] + tmpDICT[fk]
+            else:
+                resultDICT[fk] = 1
+        if resultDICT != {}:
+            print("Result:", resultDICT)
     with open("{}.json".format(targetDIR), mode="w", encoding="utf-8") as f:
         json.dump(resultDICT, f, ensure_ascii=False)
